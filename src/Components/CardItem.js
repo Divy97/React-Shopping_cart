@@ -13,7 +13,7 @@ const CardItem = ({product, addInCart}) => {
         <Card className="mt-2 mb-1">
         <CardImg 
         top
-        height="250"
+        height="120"
         width="100%"
         src={product.smallImage}
         />
