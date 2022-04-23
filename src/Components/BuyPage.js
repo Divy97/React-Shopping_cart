@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react";
 import Axios from "axios";
 import { random, commerce } from "faker"; 
 import {Container,Col,Row} from "reactstrap";
-
+import CardItem from "./CardItem";
 const apiKey = "INSERT_YOUR_KEY_HERE";
 const url = "https://api.pexels.com/v1/search?query=laptop&per_page=6&page=1";
 const localUrl = "https://myjson.dit.upm.es/api/bins/bo9h";
@@ -44,7 +44,9 @@ const BuyPage = ({addInCart}) => {
             </h1>
             <Row>
                 {product.map(product => (
-                    <span key={product.id}>{product.productName}</span>
+                    <Col md={4} key={product.id}>
+                        <CardItem product={product} addInCart={addInCart} />
+                    </Col>
                 ))}
             </Row>
         </Container>
