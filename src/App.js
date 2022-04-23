@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import {toast} from "react-toastify";
 import './App.css';
+import BuyPage from "./Components/BuyPage";
 
 const App = () => {
   const [cartItem, setCartItem] = useState([]);
@@ -34,7 +35,7 @@ const App = () => {
   }
   return (
     <div className="App">
-    
+        <BuyPage addInCart={addInCart}/>
     </div>
   );
 }
